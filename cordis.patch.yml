@@ -1,0 +1,10 @@
+# The Russian language pack bundle patch.
+#
+# Selecting this bundle in the profile (`dsh.profile.bundles`) applies this
+# patch, which inserts the pack's single Loader row. The row's `name` resolves
+# to this package; its browser half is served from `lib/client.js` because the
+# package declares `dsh.client` with `platform: web`.
+
+- insert:
+    - id: locale-ru
+      name: dsh-locale-ru

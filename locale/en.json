@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Russian language pack",
+    "description": "Adds Russian to the web GUI: a language definition plus dictionaries for every shipped UI namespace. Untranslated keys fall back to English."
+  }
+}

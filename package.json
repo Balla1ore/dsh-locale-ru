@@ -1,0 +1,64 @@
+{
+  "name": "dsh-locale-ru",
+  "version": "1.0.0",
+  "description": "Russian language pack for DeepSeek Harness: the whole web interface plus the desktop shell (menu, tray, dialogs, sign-in window)",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "cordis",
+    "locale",
+    "i18n",
+    "russian",
+    "русский",
+    "локализация"
+  ],
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./locale/en.json": "./locale/en.json",
+    "./locale/ru.json": "./locale/ru.json",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": [
+        "./cordis.patch.yml"
+      ]
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-locale"
+      ],
+      "platform": "web",
+      "immediately": true
+    }
+  },
+  "scripts": {
+    "build": "node tools/build-client.mjs",
+    "verify": "node tools/verify.mjs"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "locales/ru.json",
+    "locales/source-en.json",
+    "locales/shell-ru.json",
+    "locale/en.json",
+    "locale/ru.json",
+    "cordis.patch.yml",
+    "launch-dsh-ru.vbs",
+    "tools/*.mjs",
+    "tools/*.cjs",
+    "tools/*.ps1",
+    "README.md"
+  ]
+}

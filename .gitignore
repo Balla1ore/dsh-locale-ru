@@ -1,0 +1,12 @@
+# Runtime state and local artifacts
+shell-patch.log
+.shell-check/
+node_modules/
+node_modules
+*.log
+
+# Editors / OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
