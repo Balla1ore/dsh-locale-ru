@@ -34,8 +34,15 @@ and off from that page.
 ### From npm
 
 The name `dsh-locale-ru` on npm belongs to a different author's plugin, so this
-pack has to be published under another name. If you publish it, keep the
-`name` in `package.json` and in `cordis.patch.yml` in sync.
+pack has to be published under another name. A git or local-path install needs no
+rename: it uses the `name` in `package.json`, which the row in
+`cordis.patch.yml` must keep matching.
+
+### Do not mix with another Russian locale
+
+The language id `ru` can be registered only once. Installing this pack next to
+another Russian localisation (for instance the npm plugin of the same name by
+another author) makes the second one fail to load. Switch the other one off first.
 
 ## Enable the language
 
